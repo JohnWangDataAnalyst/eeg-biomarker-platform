@@ -1,0 +1,43 @@
+# Biomarker extraction configuration
+
+# LOCF model settings
+locf:
+  n_states: null          # number of states (null = auto from data)
+  fit_method: "subspace"  # fitting method
+  max_iter: 1000
+  tol: 1.0e-6
+  window_length: 2.0      # seconds per window
+  window_overlap: 0.5     # fraction overlap
+
+# Biomarkers to compute
+biomarkers:
+  - K_norm
+  - L_norm
+  - K_variance
+  - L_variance
+  - bandpower
+  - connectivity
+
+# Bandpower settings
+bandpower:
+  bands:
+    delta: [1, 4]
+    theta: [4, 8]
+    alpha: [8, 13]
+    beta: [13, 30]
+    gamma: [30, 40]
+  method: "welch"
+  normalize: true
+
+# Connectivity settings
+connectivity:
+  method: "coherence"
+  fmin: 1.0
+  fmax: 40.0
+
+# Output
+output_level:
+  - subject
+  - window
+save_format: "parquet"
+overwrite: false

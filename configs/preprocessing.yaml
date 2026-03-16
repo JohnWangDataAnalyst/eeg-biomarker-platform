@@ -1,0 +1,36 @@
+# Preprocessing pipeline configuration
+
+# Filtering
+l_freq: 1.0        # high-pass cutoff (Hz)
+h_freq: 40.0       # low-pass cutoff (Hz)
+notch_freq: 50.0   # notch filter frequency (Hz)
+
+# Resampling
+resample_freq: 250  # target sampling rate (Hz)
+
+# Bad channel detection
+bad_channel_method: "ransac"
+bad_channel_threshold: 0.75
+
+# Artifact rejection (ICA)
+run_ica: true
+ica_n_components: 20
+ica_method: "fastica"
+eog_channel: "auto"
+
+# Epoching
+epoch_tmin: -0.2   # seconds before event
+epoch_tmax: 1.0    # seconds after event
+baseline: [-0.2, 0.0]
+
+# Resting-state windowing (if no events)
+window_length: 2.0   # seconds
+window_overlap: 0.5  # fraction overlap
+
+# QC thresholds
+max_bad_channels_fraction: 0.2
+min_remaining_epochs: 10
+
+# Output
+save_format: "fif"
+overwrite: false

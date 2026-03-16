@@ -1,0 +1,56 @@
+# Data — never commit raw or large data
+*.fif
+*.nii
+*.nii.gz
+*.edf
+*.bdf
+*.set
+*.eeg
+*.vhdr
+*.vmrk
+*.pkl
+*.npy
+*.npz
+*.parquet
+*.h5
+*.hdf5
+*.mat
+
+# Local config with personal paths
+configs/paths.local.yaml
+
+# Outputs — generated, not source-controlled
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environments
+.env
+.venv
+env/
+venv/
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log

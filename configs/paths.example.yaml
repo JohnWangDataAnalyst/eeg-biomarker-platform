@@ -1,0 +1,10 @@
+# Template for local data paths.
+# Copy this file to configs/paths.local.yaml and fill in your local paths.
+# DO NOT commit paths.local.yaml.
+
+project_root: "/path/to/eeg-biomarker-platform"
+lemon_root: "/path/to/LEMON"
+example_notebooks_root: "/path/to/shared/notebooks"
+outputs_root: "/path/to/eeg-biomarker-platform/outputs"
+reports_root: "/path/to/shared/reports"
+database_path: "/path/to/eeg-biomarker-platform/outputs/biomarkers.db"
